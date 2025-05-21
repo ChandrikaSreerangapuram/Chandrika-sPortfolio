@@ -11,6 +11,15 @@ menuIcon.onclick = () => {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
+document.addEventListener("DOMContentLoaded", () => {
+  const bars = document.querySelectorAll(".bar span");
+  bars.forEach(bar => {
+    const width = bar.getAttribute("data-width");
+    if (width) bar.style.width = width;
+  });
+});
+
+
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
